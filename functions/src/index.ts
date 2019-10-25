@@ -1,36 +1,30 @@
 import * as functions from 'firebase-functions';
-import * as firebaseAdmin from 'firebase-admin';
 import express from 'express';
-// import serviceAccount from '../sinucatorneioapp-account.json'
+import { DatabaseService } from './services/DatabaseService';
+
 
 const PORT = 4200;
 const app = express();
 // firebaseAdmin.initializeApp(functions.config().firebase);
-firebaseAdmin.initializeApp({ 
-    credential: firebaseAdmin.credential.applicationDefault(), 
-    databaseURL: 'sinucatorneioapp.firebaseio.com'
-});
-const db = firebaseAdmin.firestore();
 
-// // Start writing Firebase Functions
-// // https://firebase.google.com/docs/functions/typescript
-//
+DatabaseService.init();
+
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true }))
 
 app.get('/player', (req, res) => {
-    db.collection('players').get().then(
-        snapshot => res.send(snapshot.docs.map(doc => doc.data()))
+    DatabaseService.getCollection('players').get().then(
+        (snapshot :any) => res.send(snapshot.docs.map((doc:any) => doc.data()))
     )
 });
 
 app.post('/player', (req, res) => {
     let player = req.body;
-    db.collection('players').add(
+    DatabaseService.getCollection('players').add(
         player
     )
-    .then(ref => ref.get().then(doc => res.send(doc.data())))
-    .catch( err => res.status(400).send(err));
+    .then((ref:any) => ref.get().then((doc:any) => res.send(doc.data())))
+    .catch( (err:any) => res.status(400).send(err));
 });
 
 
