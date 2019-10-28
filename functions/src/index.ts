@@ -1,5 +1,6 @@
 import * as functions from 'firebase-functions';
 import express from 'express';
+import cors from 'cors';
 import { Database } from './infra/Database';
 import { router } from './router';
 import { PlayerService } from './player/player.service';
@@ -11,6 +12,7 @@ const app = express();
 Database.init(functions);
 PlayerService.init();
 
+app.use(cors());
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true }))
 
