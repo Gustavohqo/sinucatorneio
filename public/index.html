@@ -1,65 +1,128 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Campeonato de Sinuca</title>
+    <link rel="stylesheet" href="./css/bulma.min.css"></link>
+    <link rel="stylesheet" href="./css/custom.css"></link>
+</head>
+<body>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/7.2.1/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/7.2.1/firebase-auth.js"></script>
-    <script defer src="/__/firebase/7.2.1/firebase-database.js"></script>
-    <script defer src="/__/firebase/7.2.1/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/7.2.1/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://bulma.io">
+                <img src="./img/sinuca-sw-logo.png" width="112" height="28">
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a href="" class="navbar-item is-active">
+                Cadastro
+                </a>
+                <!-- <a href="campeonato.html" class="navbar-item">
+                Campeonato
+                </a> -->
+            </div>
+        </div>
+    </nav>
+
+    <div class="restrict-content">
+
+        <div class="columns">
+            <div class="column is-10">
+
+                <form id="cadastroTorneio">
+                    <input type="hidden" name="nickname" value="">
+                    <h3>Realize seu cadastro para o torneio</h3>
+                    <div class="field">
+                        <label for="sinuqueiro" class="label">Nome:</label>
+                        <div class="control">
+                            <input class="input is-large" type="text" placeholder="Insira seu nome" name="name" id="sinuqueiro">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="sinuqueiro" class="label">Nível de habilidade na sinuca:</label>
+                        <div class="control">
+                            <div class="columns block-level">
+                                <div class="column">
+                                    <label class="block-level-wrap">
+                                        <input type="radio" name="level" value="SAMUEL">
+                                        <div class="block-level-item">
+                                            <p class="block-level-title">Nível Samuel</p>
+                                            <span class="block-level-subtitle">Você é péssimo, nem acerta a bola!</span>
+                                            <figure>
+                                                <img src="./img/levels/samuel-2.gif" alt="Nível samuel">
+                                            </figure>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="column">
+                                    <label class="block-level-wrap">
+                                        <input type="radio" name="level" value="QUEBRA_GALHO" checked>
+                                        <div class="block-level-item">
+                                            <p class="block-level-title">Nível Quebra-Galho</p>
+                                            <span class="block-level-subtitle">Eencaçapa na sorte e suiicida!</span>
+                                            <figure>
+                                                <img src="./img/levels/quebra-galho.gif" alt="">
+                                            </figure>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="column">
+                                    <label class="block-level-wrap">
+                                        <input type="radio" name="level" value="BAIANINHO">
+                                        <div class="block-level-item">
+                                            <p class="block-level-title">Nível Baianinho de Mauá</p>
+                                            <span class="block-level-subtitle">Você é foda, tem o jogo sob controle!</span>
+                                            <figure>
+                                                <img src="./img/levels/baianinho.gif" alt="">
+                                            </figure>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control is-right">
+                            <button type="submit" class="button is-medium">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+            
+            </div>
+            <div class="column">
+                <h4>
+                    <div class="columns">
+                        <div class="column">
+                            <span>Participantes</span>
+                        </div>
+                        <div class="column is-narrow">
+                            <button class="button is-small" title="Atualizar" id="atualizarParticipantes" onclick="exibeParticipantes()">
+                                    <svg height="18px" width="18px" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" xml:space="preserve"><path d="M384,352l96-109.3h-66.1C407.1,141.8,325,64,223.2,64C117.8,64,32,150.1,32,256s85.8,192,191.2,192  c43.1,0,83.8-14.1,117.7-40.7l7.5-5.9l-43.2-46.2l-6.2,4.6c-22.1,16.3-48.3,24.9-75.8,24.9C152.6,384.7,95.1,327,95.1,256  c0-71,57.5-128.7,128.1-128.7c66.4,0,120.7,50,127.4,115.3h-74.1L384,352z"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </h4>
+
+                <div>
+                    <ul id="playersList"></ul>
+                </div>
+                    
+            </div>
+        </div>
+
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+    <script src="./cadastro.js"></script>
+    
+</body>
 </html>

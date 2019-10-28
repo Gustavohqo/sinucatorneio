@@ -1,0 +1,308 @@
+html,
+body {
+    height: 100%;
+}
+
+
+html {
+    background: url(../img/texture.jpg) repeat #185015;
+    background-size: 10%;
+}
+body {
+    overflow: auto;
+    color: #FFF;
+    padding-top: 3.5em;
+}
+
+.navbar-item img {
+    max-height: 100%;
+}
+
+
+.restrict-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2em 0;
+}
+.full-content {
+    padding: 2em;
+}
+
+
+h3 {
+    font-size: 1.6em;
+    margin: 0 0 1em;
+}
+h4 {
+    font-size: 1.4em;
+    margin: 0 0 1em;
+}
+h3 > a,
+h4 > a {
+    color: inherit;
+} 
+
+
+form .label {
+    color: #FFF;
+}
+.is-right {
+    text-align: right;
+}
+
+
+.block-level {
+    align-items: stretch;
+}
+.block-level-wrap {
+    height: 100%;
+}
+.block-level-item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #999;
+    box-shadow: 0 0.2em 0.7em rgba(0,0,0,0.6);
+    padding: 1em;
+    border-radius: 0.4em;
+    text-align: center;
+    height: 100%;
+    transition: all 0.25s;
+    background-color: #FFF;
+    color: #333;
+    cursor: pointer;
+}
+.block-level-item:hover,
+:checked ~ .block-level-item {
+    box-shadow: 0 0.2em 0.5em rgba(255,255,255,0.2), 0 0em 0em 0.3em rgba(255,255,255,0.6);
+}
+:checked ~ .block-level-item {
+    transform: scale(1.02);
+}
+.block-level-wrap input {
+    display: none;
+}
+.block-level-item .block-level-title {
+    font-size: 1.1em;
+    margin: 0 0 0.5em;
+    font-weight: bold;
+}
+.block-level-item .block-level-subtitle {
+    font-style: italic;
+}
+.block-level-item figure {
+    display: flex;
+    align-items: flex-end;
+    flex: 1;
+    margin-top: 0.5em;
+}
+.block-level-item figure img {
+    width: 100%;
+}
+
+
+.brackets {
+    display: flex;
+    align-items: center;
+    font-size: 0.85em;
+}
+.brackets-left,
+.brackets-right {
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+}
+.brackets-left {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    padding-right: 1em;
+}
+.brackets-right {
+    padding-left: 1em;
+}
+.brackets-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+}
+.brackets-col:nth-child(2):after,
+.brackets-col:nth-child(2):before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 1px;
+    background-color: #FFF;
+}
+.brackets-col:nth-child(2):after {
+    top: calc(50% + 5.8em);
+    bottom: 25%;
+}
+.brackets-col:nth-child(2):before {
+    top: 25%;
+    bottom: calc(50% + 5.8em);
+}
+.brackets-left .brackets-col:nth-child(2):before,
+.brackets-left .brackets-col:nth-child(2):after {
+    right: -1.5em;
+}
+.brackets-right .brackets-col:nth-child(2):before,
+.brackets-right .brackets-col:nth-child(2):after {
+    left: -1.5em;
+}
+.brackets-player {
+    position: relative;
+    padding: 0 0.5em;
+    font-weight: bold;
+}
+.brackets-item.past {
+    opacity: 0.6;
+}
+.brackets-item {
+    position: relative;
+    background-color: #FFF;
+    padding: 1em;
+    border: 1px solid #999;
+    box-shadow: 0 0.2em 0.7em rgba(0,0,0,0.6);
+    color: #333;    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.brackets-item input {
+    display: inline-block;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    width: 2.5em;
+    transform: translateX(-50%);
+    display: none;
+}
+.brackets-item:nth-child(2n) input {
+    top: 10%;
+    bottom: auto;
+}
+
+.brackets-left .brackets-item {
+    margin: 0.5em 0 0.5em 3em;
+}
+.brackets-right .brackets-item {
+    margin: 0.5em 3em 0.5em 0;
+}
+
+.brackets-match:hover .brackets-item,
+.brackets-match:focus .brackets-item {
+    box-shadow: 0 0.2em 0.5em rgba(255,255,255,0.2), 0 0em 0em 0.3em rgba(255,255,255,0.6);
+}
+.brackets-match {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0.5em 0;
+}
+.brackets-final .brackets-match {
+    flex-direction: row;
+    margin: 0 1.5em;
+}
+.brackets-final .brackets-match:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -1em;
+    left: -1em;
+    display: block;
+    height: 1px;
+    background-color: #FFF;
+    width: auto;
+    border: 0;
+}
+.brackets-final .brackets-match .brackets-item {
+    margin: 0 0.5em 0 0;
+}
+.brackets-final .brackets-match .brackets-item + .brackets-item {
+    margin: 0 0 0 0.5em;
+}
+.brackets-match:before {
+    content: "";
+    position: absolute;
+    top: 25%;
+    bottom: 25%;
+    display: block;
+    width: 1.5em;
+    border-style: solid;
+    border-color: #FFF;
+}
+.brackets-left .brackets-match:before {
+    left: 100%;
+    border-width: 1px 1px 1px 0;
+}
+.brackets-right .brackets-match:before {
+    right: 100%;
+    border-width: 1px 0 1px 1px;
+}
+.brackets-match:after {
+    content: "";
+    position: absolute;
+    top: calc(25% - 1px);
+    bottom: calc(25% - 1px);
+    display: block;
+    width: 1.5em;
+    border-style: solid;
+    border-color: #FFF;
+    border-width: 1px 0;
+}
+.brackets-left .brackets-match:after {
+    left: 1.5em;
+}
+.brackets-right .brackets-match:after {
+    right: 1.5em;
+}
+.brackets-final .brackets-match:after,
+.brackets-col:last-child .brackets-match:after {
+    display: none;
+}
+
+div:not(.brackets-final) > .brackets-col:nth-child(1) .brackets-item {
+    background-color: #d12c09;
+    border-color: #d12c09;
+    color: #FFF;
+}
+div:not(.brackets-final) > .brackets-col:nth-child(2) .brackets-item {
+    background-color: #0063bb;
+    border-color: #0063bb;
+    color: #FFF;
+}
+div:not(.brackets-final) > .brackets-col:nth-child(3) .brackets-item {
+    background-color: #fdda1e;
+    border-color: #fdda1e;
+}
+.brackets-final > .brackets-col .brackets-item {
+    background-color: #000;
+    border-color: #000;
+    color: #FFF;
+}
+.brackets-item:before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    bottom: 0%;
+    left: -50%;
+    right: 0%;
+    display: block;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 25%,rgba(0,0,0,1) 100%);
+    opacity: 0.8;
+}
+.brackets-item:after {
+    content: "";
+    position: absolute;
+    top: -10%;
+    bottom: 40%;
+    left: -5%;
+    right: 35%;
+    display: block;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 1%,rgba(255,255,255,0) 60%);
+    opacity: 0.6;
+}
