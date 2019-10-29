@@ -17,8 +17,8 @@ function organizaTorneio() {
         .then(data => {
             let players = data;
             return players.map(function(players, index) {
-                document.getElementById(getBattleOrder(1,index+1)).innerHTML = players.playerOne.name;
-                document.getElementById(getBattleOrder(2,index+1)).innerHTML = players.playerTwo.name;
+                // document.getElementById(getBattleOrder(1,index+1)).innerHTML = players.playerOne.name;
+                // document.getElementById(getBattleOrder(2,index+1)).innerHTML = players.playerTwo.name;
                 document.getElementById(getPlayerOrder(1,index+1)).innerHTML = players.playerOne.name;
                 document.getElementById(getPlayerOrder(2,index+1)).innerHTML = players.playerTwo.name;
             })
@@ -27,7 +27,7 @@ function organizaTorneio() {
             console.log(err)
         })
 }
-//organizaTorneio()
+organizaTorneio();
 
 let battle = document.getElementsByClassName('battle');
 
