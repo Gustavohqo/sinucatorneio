@@ -12,8 +12,9 @@
 
     <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item" href="https://bulma.io">
-                <img src="./img/sinuca-sw-logo.png" width="112" height="28">
+            <a class="navbar-item" href="">
+                <img src="./img/sinuca-sw-logo.png">
+                <span>1º Torneio de Sinuca da Siteware</span>
             </a>
             <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
@@ -41,44 +42,90 @@
             <!-- <a href="javascript:void(0)">editar</a> -->
         </h3>
 
+        <div class="battles" style="display: none;">
+            <div class="battle" id="battleOne">
+                <div class="battle-item">
+                    <div class="battle-player" id="battle11"></div>
+                    <div class="battle-player" id="battle21"></div>
+                </div>
+                <div class="battle-item">
+                    <div class="battle-player" id="battle13"></div>
+                    <div class="battle-player" id="battle23"></div>
+                </div>
+                <div class="battle-item">
+                    <div class="battle-player" id="battle15"></div>
+                    <div class="battle-player" id="battle25"></div>
+                </div>
+                <div class="battle-item">
+                    <div class="battle-player" id="battle17"></div>
+                    <div class="battle-player" id="battle27"></div>
+                </div>
+                <div class="battle-item">
+                    <div class="battle-player" id="battle19"></div>
+                    <div class="battle-player" id="battle29"></div>
+                </div>
+                <div class="battle-item">
+                    <div class="battle-player" id="battle111"></div>
+                    <div class="battle-player" id="battle211"></div>
+                </div>
+                <div class="battle-item">
+                    <div class="battle-player" id="battle113"></div>
+                    <div class="battle-player" id="battle213"></div>
+                </div>
+                <div class="battle-item">
+                    <div class="battle-player" id="battle115"></div>
+                    <div class="battle-player" id="battle215"></div>
+                </div>
+            </div>
+            <div class="battle-cross"></div>
+            <div class="battle" id="battleTwo">
+                <div class="battle-item">
+                    <div class="battle-player" id="battle12"></div>
+                    <div class="battle-player" id="battle22"></div>
+                </div>
+                <div class="battle-item">
+                    <div class="battle-player" id="battle14"></div>
+                    <div class="battle-player" id="battle24"></div>
+                </div>
+                <div class="battle-item">
+                    <div class="battle-player" id="battle16"></div>
+                    <div class="battle-player" id="battle26"></div>
+                </div>
+                <div class="battle-item">
+                    <div class="battle-player" id="battle18"></div>
+                    <div class="battle-player" id="battle28"></div>
+                </div>
+                <div class="battle-item">
+                    <div class="battle-player" id="battle110"></div>
+                    <div class="battle-player" id="battle210"></div>
+                </div>
+                <div class="battle-item">
+                    <div class="battle-player" id="battle112"></div>
+                    <div class="battle-player" id="battle212"></div>
+                </div>
+                <div class="battle-item">
+                    <div class="battle-player" id="battle114"></div>
+                    <div class="battle-player" id="battle214"></div>
+                </div>
+                <div class="battle-item">
+                    <div class="battle-player" id="battle116"></div>
+                    <div class="battle-player" id="battle216"></div>
+                </div>
+            </div>
+        </div>
+
         <div class="brackets">
             <div class="brackets-left">
                 <div class="brackets-col">
                     <a href="javascript:void(0)" class="brackets-match">
                         <div class="brackets-item">
-                            <div class="brackets-player"><span>Band</span></div>
-                            <div class="brackets-player"><span>Samuel</span></div>
+                            <div class="brackets-player"><span id="player125">A Definir</span></div>
+                            <div class="brackets-player"><span id="player225">A Definir</span></div>
                             <input class="bracket-val" type="text">
                         </div>
                         <div class="brackets-item">
-                            <div class="brackets-player"><span>Band</span></div>
-                            <div class="brackets-player"><span>Samuel</span></div>
-                            <input class="bracket-val" type="text">
-                        </div>
-                    </a>
-                </div>
-                <div class="brackets-col">
-                    <a href="javascript:void(0)" class="brackets-match">
-                        <div class="brackets-item">
-                            <div class="brackets-player"><span>Band</span></div>
-                            <div class="brackets-player"><span>Samuel</span></div>
-                            <input class="bracket-val" type="text">
-                        </div>
-                        <div class="brackets-item">
-                            <div class="brackets-player"><span>Band</span></div>
-                            <div class="brackets-player"><span>Samuel</span></div>
-                            <input class="bracket-val" type="text">
-                        </div>
-                    </a>
-                    <a href="javascript:void(0)" class="brackets-match">
-                        <div class="brackets-item">
-                            <div class="brackets-player"><span>Band</span></div>
-                            <div class="brackets-player"><span>Samuel</span></div>
-                            <input class="bracket-val" type="text">
-                        </div>
-                        <div class="brackets-item">
-                            <div class="brackets-player"><span>Band</span></div>
-                            <div class="brackets-player"><span>Samuel</span></div>
+                            <div class="brackets-player"><span id="player126">A Definir</span></div>
+                            <div class="brackets-player"><span id="player226">A Definir</span></div>
                             <input class="bracket-val" type="text">
                         </div>
                     </a>
@@ -86,49 +133,75 @@
                 <div class="brackets-col">
                     <a href="javascript:void(0)" class="brackets-match">
                         <div class="brackets-item">
-                            <div class="brackets-player"><span>Band</span></div>
-                            <div class="brackets-player"><span>Samuel</span></div>
+                            <div class="brackets-player"><span id="player117">A Definir</span></div>
+                            <div class="brackets-player"><span id="player217">A Definir</span></div>
                             <input class="bracket-val" type="text">
                         </div>
                         <div class="brackets-item">
-                            <div class="brackets-player"><span>Band</span></div>
-                            <div class="brackets-player"><span>Samuel</span></div>
-                            <input class="bracket-val" type="text">
-                        </div>
-                    </a>
-                    <a href="javascript:void(0)" class="brackets-match">
-                        <div class="brackets-item">
-                            <div class="brackets-player"><span>Band</span></div>
-                            <div class="brackets-player"><span>Samuel</span></div>
-                            <input class="bracket-val" type="text">
-                        </div>
-                        <div class="brackets-item">
-                            <div class="brackets-player"><span>Band</span></div>
-                            <div class="brackets-player"><span>Samuel</span></div>
+                            <div class="brackets-player"><span id="player118">A Definir</span></div>
+                            <div class="brackets-player"><span id="player218">A Definir</span></div>
                             <input class="bracket-val" type="text">
                         </div>
                     </a>
                     <a href="javascript:void(0)" class="brackets-match">
                         <div class="brackets-item">
-                            <div class="brackets-player"><span>Band</span></div>
-                            <div class="brackets-player"><span>Samuel</span></div>
+                            <div class="brackets-player"><span id="player119">A Definir</span></div>
+                            <div class="brackets-player"><span id="player219">A Definir</span></div>
                             <input class="bracket-val" type="text">
                         </div>
                         <div class="brackets-item">
-                            <div class="brackets-player"><span>Band</span></div>
-                            <div class="brackets-player"><span>Samuel</span></div>
+                            <div class="brackets-player"><span id="player120">A Definir</span></div>
+                            <div class="brackets-player"><span id="player220">A Definir</span></div>
+                            <input class="bracket-val" type="text">
+                        </div>
+                    </a>
+                </div>
+                <div class="brackets-col">
+                    <a href="javascript:void(0)" class="brackets-match">
+                        <div class="brackets-item">
+                            <div class="brackets-player"><span id="player11">A Definir</span></div>
+                            <div class="brackets-player"><span id="player21">A Definir</span></div>
+                            <input class="bracket-val" type="text">
+                        </div>
+                        <div class="brackets-item">
+                            <div class="brackets-player"><span id="player12">A Definir</span></div>
+                            <div class="brackets-player"><span id="player22">A Definir</span></div>
                             <input class="bracket-val" type="text">
                         </div>
                     </a>
                     <a href="javascript:void(0)" class="brackets-match">
                         <div class="brackets-item">
-                            <div class="brackets-player"><span>Band</span></div>
-                            <div class="brackets-player"><span>Samuel</span></div>
+                            <div class="brackets-player"><span id="player13">A Definir</span></div>
+                            <div class="brackets-player"><span id="player23">A Definir</span></div>
                             <input class="bracket-val" type="text">
                         </div>
                         <div class="brackets-item">
-                            <div class="brackets-player"><span>Band</span></div>
-                            <div class="brackets-player"><span>Samuel</span></div>
+                            <div class="brackets-player"><span id="player14">A Definir</span></div>
+                            <div class="brackets-player"><span id="player24">A Definir</span></div>
+                            <input class="bracket-val" type="text">
+                        </div>
+                    </a>
+                    <a href="javascript:void(0)" class="brackets-match">
+                        <div class="brackets-item">
+                            <div class="brackets-player"><span id="player15">A Definir</span></div>
+                            <div class="brackets-player"><span id="player25">A Definir</span></div>
+                            <input class="bracket-val" type="text">
+                        </div>
+                        <div class="brackets-item">
+                            <div class="brackets-player"><span id="player16">A Definir</span></div>
+                            <div class="brackets-player"><span id="player26">A Definir</span></div>
+                            <input class="bracket-val" type="text">
+                        </div>
+                    </a>
+                    <a href="javascript:void(0)" class="brackets-match">
+                        <div class="brackets-item">
+                            <div class="brackets-player"><span id="player17">A Definir</span></div>
+                            <div class="brackets-player"><span id="player27">A Definir</span></div>
+                            <input class="bracket-val" type="text">
+                        </div>
+                        <div class="brackets-item">
+                            <div class="brackets-player"><span id="player18">A Definir</span></div>
+                            <div class="brackets-player"><span id="player28">A Definir</span></div>
                             <input class="bracket-val" type="text">
                         </div>
                     </a>
@@ -138,13 +211,13 @@
                 <div class="brackets-col">
                     <a href="javascript:void(0)" class="brackets-match">
                         <div class="brackets-item">
-                            <div class="brackets-player"><span>Band</span></div>
-                            <div class="brackets-player"><span>Samuel</span></div>
+                            <div class="brackets-player"><span id="player129">A Definir</span></div>
+                            <div class="brackets-player"><span id="player229">A Definir</span></div>
                             <input class="bracket-val" type="text">
                         </div>
                         <div class="brackets-item">
-                            <div class="brackets-player"><span>Band</span></div>
-                            <div class="brackets-player"><span>Samuel</span></div>
+                            <div class="brackets-player"><span id="player130">A Definir</span></div>
+                            <div class="brackets-player"><span id="player230">A Definir</span></div>
                             <input class="bracket-val" type="text">
                         </div>
                     </a>
@@ -154,39 +227,13 @@
                 <div class="brackets-col">
                     <a href="javascript:void(0)" class="brackets-match">
                         <div class="brackets-item">
-                            <div class="brackets-player"><span>Band</span></div>
-                            <div class="brackets-player"><span>Samuel</span></div>
+                            <div class="brackets-player"><span id="player127">A Definir</span></div>
+                            <div class="brackets-player"><span id="player227">A Definir</span></div>
                             <input class="bracket-val" type="text">
                         </div>
                         <div class="brackets-item">
-                            <div class="brackets-player"><span>Band</span></div>
-                            <div class="brackets-player"><span>Samuel</span></div>
-                            <input class="bracket-val" type="text">
-                        </div>
-                    </a>
-                </div>
-                <div class="brackets-col">
-                    <a href="javascript:void(0)" class="brackets-match">
-                        <div class="brackets-item">
-                            <div class="brackets-player"><span>Band</span></div>
-                            <div class="brackets-player"><span>Samuel</span></div>
-                            <input class="bracket-val" type="text">
-                        </div>
-                        <div class="brackets-item">
-                            <div class="brackets-player"><span>Band</span></div>
-                            <div class="brackets-player"><span>Samuel</span></div>
-                            <input class="bracket-val" type="text">
-                        </div>
-                    </a>
-                    <a href="javascript:void(0)" class="brackets-match">
-                        <div class="brackets-item">
-                            <div class="brackets-player"><span>Band</span></div>
-                            <div class="brackets-player"><span>Samuel</span></div>
-                            <input class="bracket-val" type="text">
-                        </div>
-                        <div class="brackets-item">
-                            <div class="brackets-player"><span>Band</span></div>
-                            <div class="brackets-player"><span>Samuel</span></div>
+                            <div class="brackets-player"><span id="player128">A Definir</span></div>
+                            <div class="brackets-player"><span id="player228">A Definir</span></div>
                             <input class="bracket-val" type="text">
                         </div>
                     </a>
@@ -194,49 +241,75 @@
                 <div class="brackets-col">
                     <a href="javascript:void(0)" class="brackets-match">
                         <div class="brackets-item">
-                            <div class="brackets-player"><span>Band</span></div>
-                            <div class="brackets-player"><span>Samuel</span></div>
+                            <div class="brackets-player"><span id="player121">A Definir</span></div>
+                            <div class="brackets-player"><span id="player221">A Definir</span></div>
                             <input class="bracket-val" type="text">
                         </div>
                         <div class="brackets-item">
-                            <div class="brackets-player"><span>Band</span></div>
-                            <div class="brackets-player"><span>Samuel</span></div>
-                            <input class="bracket-val" type="text">
-                        </div>
-                    </a>
-                    <a href="javascript:void(0)" class="brackets-match">
-                        <div class="brackets-item">
-                            <div class="brackets-player"><span>Band</span></div>
-                            <div class="brackets-player"><span>Samuel</span></div>
-                            <input class="bracket-val" type="text">
-                        </div>
-                        <div class="brackets-item">
-                            <div class="brackets-player"><span>Band</span></div>
-                            <div class="brackets-player"><span>Samuel</span></div>
+                            <div class="brackets-player"><span id="player122">A Definir</span></div>
+                            <div class="brackets-player"><span id="player222">A Definir</span></div>
                             <input class="bracket-val" type="text">
                         </div>
                     </a>
                     <a href="javascript:void(0)" class="brackets-match">
                         <div class="brackets-item">
-                            <div class="brackets-player"><span>Band</span></div>
-                            <div class="brackets-player"><span>Samuel</span></div>
+                            <div class="brackets-player"><span id="player123">A Definir</span></div>
+                            <div class="brackets-player"><span id="player223">A Definir</span></div>
                             <input class="bracket-val" type="text">
                         </div>
                         <div class="brackets-item">
-                            <div class="brackets-player"><span>Band</span></div>
-                            <div class="brackets-player"><span>Samuel</span></div>
+                            <div class="brackets-player"><span id="player124">A Definir</span></div>
+                            <div class="brackets-player"><span id="player224">A Definir</span></div>
+                            <input class="bracket-val" type="text">
+                        </div>
+                    </a>
+                </div>
+                <div class="brackets-col">
+                    <a href="javascript:void(0)" class="brackets-match">
+                        <div class="brackets-item">
+                            <div class="brackets-player"><span id="player19">A Definir</span></div>
+                            <div class="brackets-player"><span id="player29">A Definir</span></div>
+                            <input class="bracket-val" type="text">
+                        </div>
+                        <div class="brackets-item">
+                            <div class="brackets-player"><span id="player110">A Definir</span></div>
+                            <div class="brackets-player"><span id="player210">A Definir</span></div>
                             <input class="bracket-val" type="text">
                         </div>
                     </a>
                     <a href="javascript:void(0)" class="brackets-match">
                         <div class="brackets-item">
-                            <div class="brackets-player"><span>Band</span></div>
-                            <div class="brackets-player"><span>Samuel</span></div>
+                            <div class="brackets-player"><span id="player111">A Definir</span></div>
+                            <div class="brackets-player"><span id="player211">A Definir</span></div>
                             <input class="bracket-val" type="text">
                         </div>
                         <div class="brackets-item">
-                            <div class="brackets-player"><span>Band</span></div>
-                            <div class="brackets-player"><span>Samuel</span></div>
+                            <div class="brackets-player"><span id="player112">A Definir</span></div>
+                            <div class="brackets-player"><span id="player212">A Definir</span></div>
+                            <input class="bracket-val" type="text">
+                        </div>
+                    </a>
+                    <a href="javascript:void(0)" class="brackets-match">
+                        <div class="brackets-item">
+                            <div class="brackets-player"><span id="player113">A Definir</span></div>
+                            <div class="brackets-player"><span id="player213">A Definir</span></div>
+                            <input class="bracket-val" type="text">
+                        </div>
+                        <div class="brackets-item">
+                            <div class="brackets-player"><span id="player114">A Definir</span></div>
+                            <div class="brackets-player"><span id="player214">A Definir</span></div>
+                            <input class="bracket-val" type="text">
+                        </div>
+                    </a>
+                    <a href="javascript:void(0)" class="brackets-match">
+                        <div class="brackets-item">
+                            <div class="brackets-player"><span id="player115">A Definir</span></div>
+                            <div class="brackets-player"><span id="player215">A Definir</span></div>
+                            <input class="bracket-val" type="text">
+                        </div>
+                        <div class="brackets-item">
+                            <div class="brackets-player"><span id="player116">A Definir</span></div>
+                            <div class="brackets-player"><span id="player216">A Definir</span></div>
                             <input class="bracket-val" type="text">
                         </div>
                     </a>
@@ -246,7 +319,7 @@
 
     </div>
 
-    <script src="./main.js"></script>
+    <script src="./campeonato.js"></script>
     
 </body>
 </html>
