@@ -6,7 +6,7 @@ const totalParticipantes = document.getElementById('totalParticipantes');
 
 function exibeParticipantes() {
     playersList.innerHTML = '';
-    fetch('https://us-central1-sinucatorneioapp.cloudfunctions.net/api/player')
+    fetch('./api.json')
         .then(response => {
             return response.json()
         })
@@ -29,7 +29,7 @@ exibeParticipantes()
 cadastroTorneio.onsubmit = async(e) => {
     e.preventDefault();
     const params = new URLSearchParams([...new FormData(e.target).entries()]);
-    fetch('https://us-central1-sinucatorneioapp.cloudfunctions.net/api/player', {method:"POST", body:params})
+    fetch('./api.json', {method:"POST", body:params})
     .then(() => { 
         playersList.innerHTML = '';
         exibeParticipantes();

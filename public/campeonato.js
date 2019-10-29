@@ -10,7 +10,7 @@ function getBattleOrder(order,group) {
 
 
 function organizaTorneio() {
-    fetch('./api.json')
+    fetch('https://us-central1-sinucatorneioapp.cloudfunctions.net/api/duo')
         .then(response => {
             return response.json()
         })
@@ -47,7 +47,7 @@ function exibeConfrontos() {
         last[0].classList.remove('active');
         document.getElementById('brackets').style.display = 'flex';
         document.getElementById('battles').style.display = 'none';
-    }, 58000);
+    }, 30000);
 }
 
 //exibeConfrontos()
