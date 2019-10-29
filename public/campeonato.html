@@ -38,83 +38,104 @@
     <div class="full-content">
 
         <h3>
-            Disputas 
-            <!-- <a href="javascript:void(0)">editar</a> -->
-        </h3>
-
-        <div class="battles" style="display: none;">
-            <div class="battle" id="battleOne">
-                <div class="battle-item">
-                    <div class="battle-player" id="battle11"></div>
-                    <div class="battle-player" id="battle21"></div>
-                </div>
-                <div class="battle-item">
-                    <div class="battle-player" id="battle13"></div>
-                    <div class="battle-player" id="battle23"></div>
-                </div>
-                <div class="battle-item">
-                    <div class="battle-player" id="battle15"></div>
-                    <div class="battle-player" id="battle25"></div>
-                </div>
-                <div class="battle-item">
-                    <div class="battle-player" id="battle17"></div>
-                    <div class="battle-player" id="battle27"></div>
-                </div>
-                <div class="battle-item">
-                    <div class="battle-player" id="battle19"></div>
-                    <div class="battle-player" id="battle29"></div>
-                </div>
-                <div class="battle-item">
-                    <div class="battle-player" id="battle111"></div>
-                    <div class="battle-player" id="battle211"></div>
-                </div>
-                <div class="battle-item">
-                    <div class="battle-player" id="battle113"></div>
-                    <div class="battle-player" id="battle213"></div>
-                </div>
-                <div class="battle-item">
-                    <div class="battle-player" id="battle115"></div>
-                    <div class="battle-player" id="battle215"></div>
+            <div class="columns">
+                <div class="column">Disputas</div>
+                <div class="column is-narrow">
+                    <button class="button" id="sortear" onclick="exibeConfrontos(); organizaTorneio();">Sortear</button>
+                    <!-- <button class="button">Editar</button> -->
                 </div>
             </div>
+        </h3>
+
+        <div class="battles-gp" id="battles" style="display: none;">
+
             <div class="battle-cross"></div>
-            <div class="battle" id="battleTwo">
-                <div class="battle-item">
-                    <div class="battle-player" id="battle12"></div>
-                    <div class="battle-player" id="battle22"></div>
+
+            <div class="battles">
+                <div class="battle" >
+                    <div class="battle-item">
+                        <div class="battle-player" id="battle11"></div>
+                        <div class="battle-player" id="battle21"></div>
+                    </div>
+                    <div class="battle-item">
+                        <div class="battle-player" id="battle12"></div>
+                        <div class="battle-player" id="battle22"></div>
+                    </div>
                 </div>
-                <div class="battle-item">
-                    <div class="battle-player" id="battle14"></div>
-                    <div class="battle-player" id="battle24"></div>
+                <div class="battle" >
+                    <div class="battle-item">
+                        <div class="battle-player" id="battle13"></div>
+                        <div class="battle-player" id="battle23"></div>
+                    </div>
+                    <div class="battle-item">
+                        <div class="battle-player" id="battle14"></div>
+                        <div class="battle-player" id="battle24"></div>
+                    </div>
                 </div>
-                <div class="battle-item">
-                    <div class="battle-player" id="battle16"></div>
-                    <div class="battle-player" id="battle26"></div>
+                <div class="battle" >
+                    <div class="battle-item">
+                        <div class="battle-player" id="battle15"></div>
+                        <div class="battle-player" id="battle25"></div>
+                    </div>
+                    <div class="battle-item">
+                        <div class="battle-player" id="battle16"></div>
+                        <div class="battle-player" id="battle26"></div>
+                    </div>
                 </div>
-                <div class="battle-item">
-                    <div class="battle-player" id="battle18"></div>
-                    <div class="battle-player" id="battle28"></div>
+                <div class="battle" >
+                    <div class="battle-item">
+                        <div class="battle-player" id="battle17"></div>
+                        <div class="battle-player" id="battle27"></div>
+                    </div>
+                    <div class="battle-item">
+                        <div class="battle-player" id="battle18"></div>
+                        <div class="battle-player" id="battle28"></div>
+                    </div>
                 </div>
-                <div class="battle-item">
-                    <div class="battle-player" id="battle110"></div>
-                    <div class="battle-player" id="battle210"></div>
+                <div class="battle" >
+                    <div class="battle-item">
+                        <div class="battle-player" id="battle19"></div>
+                        <div class="battle-player" id="battle29"></div>
+                    </div>
+                    <div class="battle-item">
+                        <div class="battle-player" id="battle110"></div>
+                        <div class="battle-player" id="battle210"></div>
+                    </div>
                 </div>
-                <div class="battle-item">
-                    <div class="battle-player" id="battle112"></div>
-                    <div class="battle-player" id="battle212"></div>
+                <div class="battle" >
+                    <div class="battle-item">
+                        <div class="battle-player" id="battle111"></div>
+                        <div class="battle-player" id="battle211"></div>
+                    </div>
+                    <div class="battle-item">
+                        <div class="battle-player" id="battle112"></div>
+                        <div class="battle-player" id="battle212"></div>
+                    </div>
                 </div>
-                <div class="battle-item">
-                    <div class="battle-player" id="battle114"></div>
-                    <div class="battle-player" id="battle214"></div>
+                <div class="battle" >
+                    <div class="battle-item">
+                        <div class="battle-player" id="battle113"></div>
+                        <div class="battle-player" id="battle213"></div>
+                    </div>
+                    <div class="battle-item">
+                        <div class="battle-player" id="battle14"></div>
+                        <div class="battle-player" id="battle24"></div>
+                    </div>
                 </div>
-                <div class="battle-item">
-                    <div class="battle-player" id="battle116"></div>
-                    <div class="battle-player" id="battle216"></div>
+                <div class="battle" >
+                    <div class="battle-item">
+                        <div class="battle-player" id="battle115"></div>
+                        <div class="battle-player" id="battle215"></div>
+                    </div>
+                    <div class="battle-item">
+                        <div class="battle-player" id="battle116"></div>
+                        <div class="battle-player" id="battle216"></div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="brackets">
+        <div class="brackets" id="brackets">
             <div class="brackets-left">
                 <div class="brackets-col">
                     <a href="javascript:void(0)" class="brackets-match">

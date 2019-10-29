@@ -170,7 +170,8 @@ form .label {
     padding: 1em;
     border: 1px solid #999;
     box-shadow: 0 0.2em 0.7em rgba(0,0,0,0.6);
-    color: #333;    width: 10em;
+    color: #333;    
+    width: 10em;
     height: 10em;
     border-radius: 50%;
     display: flex;
@@ -318,4 +319,130 @@ div:not(.brackets-final) > .brackets-col:nth-child(3) .brackets-item {
     display: block;
     background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 1%,rgba(255,255,255,0) 60%);
     opacity: 0.6;
+}
+
+
+.battles {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(0,0,0,0.3);
+}
+.battle:not(.active) {
+    height: 0;
+    overflow: hidden;
+    position: relative;
+}
+.battle.active {
+    height: 100%;
+    position: relative;
+}
+.battle-item {
+    position: absolute;
+    right: 110%;
+    top: calc(50% - 10em);
+    background-color: #FFF;
+    padding: 1em;
+    border: 1px solid #999;
+    box-shadow: 0 0.2em 0.7em rgba(0,0,0,0.6);
+    color: #333;
+    height: 20em;
+    width: 20em;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.battle-item + .battle-item {
+    right: auto;
+    left: 110%;
+}
+.battle.active .battle-item {
+    animation: exibePrimeiraDupla 7s linear forwards;
+}
+.battle.active .battle-item + .battle-item {
+    animation: exibeSegundaDupla 7s linear forwards;
+}
+.battle-item:before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    bottom: 0%;
+    left: -50%;
+    right: 0%;
+    display: block;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 25%,rgba(0,0,0,1) 100%);
+    opacity: 0.8;
+}
+.battle-item:after {
+    content: "";
+    position: absolute;
+    top: -10%;
+    bottom: 40%;
+    left: -5%;
+    right: 35%;
+    display: block;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 1%,rgba(255,255,255,0) 60%);
+    opacity: 0.6;
+}
+.battle-player {
+    font-size: 2em;
+    text-align: center;
+} 
+.battle-player + .battle-player:before {
+    content: "&";
+    display: block;
+    line-height: 1;
+    opacity: 0.7;
+}
+
+.battle-cross {
+    position: fixed;
+    width: 8em;
+    height: 8em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url(../img/cross.png) no-repeat;
+    background-size: cover;
+}
+
+@keyframes exibePrimeiraDupla {
+    0% {
+        right: 110%;
+    }
+    4% {
+        right: 50%;
+    }
+    6% {
+        right: 60%;
+    }
+    95% {
+        right: 60%;
+    }
+    100% {
+        right: 110%;
+    }
+}
+@keyframes exibeSegundaDupla {
+    0% {
+        left: 110%;
+    }
+    4% {
+        left: 50%;
+    }
+    6% {
+        left: 60%;
+    }
+    95% {
+        left: 60%;
+    }
+    100% {
+        left: 110%;
+    }
 }
