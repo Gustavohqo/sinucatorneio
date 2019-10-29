@@ -22,4 +22,3 @@ app.listen(PORT, () => {
 })
 
 export const api = functions.https.onRequest(app);
-

@@ -21,12 +21,22 @@ const drawDuos = (players:any) => {
         draw(samuelPlayers.slice(0, baianinhoPlayers.length), baianinhoPlayers, duos);
         spare.push(... samuelPlayers.slice(-spareNumber))
     }
+    else {
+        let spareNumber = baianinhoPlayers.length - samuelPlayers.length;
+        draw(samuelPlayers.slice(0, samuelPlayers.length), samuelPlayers, duos);
+        spare.push(... baianinhoPlayers.slice(-spareNumber))
+    }
 
     quebraGalhoPlayers.push(...spare);
     if (quebraGalhoPlayers.length % 2 === 0 ) {
         let midpoint = quebraGalhoPlayers.length / 2;
         draw(quebraGalhoPlayers.slice(0, midpoint), quebraGalhoPlayers.slice(-midpoint), duos)
     }
+    else {
+        let midpoint = Math.floor(quebraGalhoPlayers.length / 2);
+        draw(quebraGalhoPlayers.slice(0, midpoint), quebraGalhoPlayers.slice(-midpoint - 1), duos)
+    }
+
     return duos;
 }
 
@@ -42,10 +52,10 @@ duoRouter.get('/', async (req, res) => {
 
 export { duoRouter };
 
-function draw(baianinhoPlayers: any, samuelPlayers: any, duos: any[]) {
-    for (let index = 0; index <= samuelPlayers.length; index++) {
-        const playerOne = baianinhoPlayers.pop();
-        const playerTwo = samuelPlayers.pop();
+function draw(listOne: any, listTwo: any, duos: any[]) {
+    while (listTwo.length > 0 ) {
+        const playerOne = listOne.pop();
+        const playerTwo = listTwo.pop();
         duos.push({ playerOne, playerTwo, phase: "", group: "" });
     }
 }
