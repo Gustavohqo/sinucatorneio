@@ -6,7 +6,7 @@ const totalParticipantes = document.getElementById('totalParticipantes');
 
 function exibeParticipantes() {
     playersList.innerHTML = '';
-    fetch('./api.json')
+    fetch('https://us-central1-sinucatorneioapp.cloudfunctions.net/api/player')
         .then(response => {
             return response.json()
         })
