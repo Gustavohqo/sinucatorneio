@@ -30,7 +30,11 @@ cadastroTorneio.onsubmit = async(e) => {
     e.preventDefault();
     const params = new URLSearchParams([...new FormData(e.target).entries()]);
     fetch('https://us-central1-sinucatorneioapp.cloudfunctions.net/api/player', {method:"POST", body:params})
-    .then( () => { playersList.innerHTML = ''; exibeParticipantes()} )
+    
+    playersList.innerHTML = '';
+    setTimeout(() => {
+        exibeParticipantes();
+    }, 1000);
 }
 
 
