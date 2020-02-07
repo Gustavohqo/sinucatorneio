@@ -1,1 +1,27 @@
-<p>choose-tournament works!</p>
+<section>
+  <section
+    id="title-section"
+    class="has-text-centered has-text-white is-uppercase"
+  >
+    <h1 class="title is-1 has-text-white">Código do Torneio</h1>
+  </section>
+  <div class="field columns is-centered">
+    <div class="control column  is-one-quarter-desktop is-mobile has-icons-left has-icons-right">
+      <input
+        class="input is-large"
+        type="text"
+        placeholder="Código"
+        [(ngModel)]="tournamentCode"
+        maxlength="8"
+        (ngModelChange)="tournamentCodeChange($event)"
+      />
+      <span class="icon is-large is-left">
+        <fa-icon [icon]="faHashtag" size="lg"></fa-icon>
+      </span>
+      <span class="icon is-large is-right" *ngIf="spinnerSubject | async">
+        <fa-icon [icon]="faSpinner" size="lg" [spin]="true"></fa-icon>
+      </span>
+
+    </div>
+  </div>
+</section>
