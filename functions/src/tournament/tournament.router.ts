@@ -26,7 +26,7 @@ tournamentRouter.get("/", (req: any, res: any) => {
   let tournament = tournaments.filter( t => t.code === code);
 
   if(tournament && tournament[0]) {
-    res.send(tournament);
+    res.send(tournament[0]);
   }
   else {
     console.log(`404; NOT_FOUND; Tournament not found for code ${code}`);

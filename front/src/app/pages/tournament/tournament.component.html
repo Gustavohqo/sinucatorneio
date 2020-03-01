@@ -1,0 +1,93 @@
+<section>
+  <div class="container columns is-multiline">
+    <div
+      id="title-sectio-tournament"
+      class="has-text-centered has-text-white is-uppercase column is-full"
+    >
+      <h1 class="title is-1 has-text-white">
+        {{ tournament.name }}
+      </h1>
+    </div>
+
+    <div class="column is-full">
+      <div class="box is-centered level">
+        <div class="column is-three-quarters">
+          <div class="hero-head has-text-centered">
+            Cadastro
+          </div>
+          <div class="field">
+            <div class="control">
+              <input
+                class="input is-one-quarter"
+                type="text"
+                placeholder="Nome"
+                [(ngModel)]="name"
+              />
+            </div>
+          </div>
+          <div class="tile is-ancestor">
+            <div class="tile is-parent control">
+              <article
+                class="tile is-child notification is-danger has-text-centered"
+              >
+                <img src="../../../assets/samuel-2.gif" alt="" />
+                <label class="radio-container is-spaced">
+                  SAMUEL
+                  <input class="is-large" type="radio" name="answer" />
+                  <span class="checkmark"></span>
+                </label>
+              </article>
+              <article
+                class="tile is-child notification is-warning has-text-centered"
+              >
+                <img src="../../../assets/quebra-galho.gif" alt="" />
+                <label class="radio-container">
+                  QUEBRA-GALHO
+                  <input type="radio" name="answer" />
+                  <span class="checkmark"></span>
+                </label>
+              </article>
+              <article
+                class="tile is-child notification is-primary has-text-centered"
+              >
+                <img src="../../../assets/baianinho.gif" alt="" />
+                <label class="radio-container">
+                  BAIANINHO
+                  <input type="radio" name="answer" />
+                  <span class="checkmark"></span>
+                </label>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-one-quarters">
+          <div class="has-text-centered">
+            Participantes
+          </div>
+          <div class="has-text-centered">
+            <ul>
+              <li *ngFor="let participante of tournament.participantes">
+                {{ participante }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="column is-one-quarter">
+      <div class="box is-centered">
+        <h1 class="title is-3">
+          Participantes
+        </h1>
+
+        <ol typ1">
+          <li *ngFor="let participante.participantes">
+            {{ participante }}
+          </li>
+        <>
+      </div>
+    </div> -->
+  </div>
+</section>

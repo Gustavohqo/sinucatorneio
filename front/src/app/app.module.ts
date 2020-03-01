@@ -11,6 +11,7 @@ import { LayoutComponent } from './pages/layout/layout.component';
 import { MainHeaderComponent } from './components/main-header/main-header.component';
 import { MainFooterComponent } from './components/main-footer/main-footer.component';
 import { ChooseTournamentComponent } from './pages/choose-tournament/choose-tournament.component';
+import { TournamentComponent } from './pages/tournament/tournament.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ChooseTournamentComponent } from './pages/choose-tournament/choose-tour
     LayoutComponent,
     MainHeaderComponent,
     MainFooterComponent,
-    ChooseTournamentComponent
+    ChooseTournamentComponent,
+    TournamentComponent
   ],
   imports: [
     BrowserModule,

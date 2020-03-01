@@ -8,6 +8,7 @@ import {
 import "rxjs/add/operator/debounceTime";
 import { Subject } from "rxjs";
 import { TournamentService } from "src/app/service/tournament.service";
+import { Router } from '@angular/router';
 
 @Component({
   selector: "app-choose-tournament",
@@ -28,7 +29,8 @@ export class ChooseTournamentComponent implements OnInit {
   successIconSubject: Subject<boolean> = new Subject<boolean>();
   failIconSubject: Subject<boolean> = new Subject<boolean>();
 
-  constructor(private tournamentService: TournamentService) {
+  constructor(private tournamentService: TournamentService,
+    private router : Router) {
     this.initStates();
 
     this.tournamentCodeSubject.debounceTime(1000).subscribe(code => {
@@ -40,6 +42,10 @@ export class ChooseTournamentComponent implements OnInit {
             setTimeout(() => {
               this.spinnerSubject.next(false);
               this.successIconSubject.next(true);
+              setTimeout(() => {
+                tournamentService.storeTournament(result[0])
+                this.router.navigate(['/tournament']);
+              }, 1000);
             }, 1000);
           },
           error => {
@@ -55,7 +61,6 @@ export class ChooseTournamentComponent implements OnInit {
   ngOnInit() {}
 
   initStates() {
-    this.spinnerSubject.next(false);
     this.successIconSubject.next(false);
     this.failIconSubject.next(false);
   }
