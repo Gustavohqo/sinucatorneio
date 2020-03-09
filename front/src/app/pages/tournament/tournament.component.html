@@ -1,0 +1,131 @@
+<div class="container">
+  <div class="columns">
+    <div class="column has-text-centered is-full">
+      <h1 class="title is-1 has-text-white">{{ tournament.name }}</h1>
+      <div class="columns has-background-white">
+        <!-- CADASTRO -->
+        <div class="column is-three-quarters">
+          <div class="hero is-fullheighted">
+            <div class="hero-head">
+              <h1 class="title is-3">
+                CADASTRO
+              </h1>
+            </div>
+            <div class="hero-body">
+              <div class="column is-centered">
+                <div class="columns is-centered ">
+                  <div class="column is-tree-quarter">
+                    <div class="field">
+                      <div class="control">
+                        <input
+                          class="input is-info is-large"
+                          type="text"
+                          placeholder="Nome"
+                          [(ngModel)]="playerName"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column is-one-quarter center">
+                    <button id="register-button" class="button is-primary" disabled (click)="addPlayer()">CADASTRO</button>
+                  </div>
+                </div>
+                <div class="column has-text-centered">
+                  NÍVEIS
+                </div>
+                <div class="columns">
+                  <div
+                    id="nivel-baixo"
+                    class="column nivel"
+                    [ngClass]="nivelBaixoIsSelected ? 'is-half' : ''"
+                    (click)="onClick('nivel-baixo')"
+                  >
+                    <div class="notification is-danger">
+                      <img src="../../../assets/samuel-2.gif" alt="" />
+                      <label class="radio-container is-spaced has-text-grey-darker">
+                        <h6 class="title is-6">
+                          BERNADO
+                          <span class="icon">
+                            <fa-icon [icon]="faAward" size="md"></fa-icon>
+                          </span>
+                        </h6>
+                      </label>
+                    </div>
+                  </div>
+                  <div
+                    id="nivel-medio"
+                    class="column nivel"
+                    [ngClass]="nivelMedioIsSelected ? 'is-half' : ''"
+                    (click)="onClick('nivel-medio')"
+                  >
+                    <div class="notification is-warning">
+                      <img src="../../../assets/quebra-galho.gif" alt="" />
+                      <label class="radio-container is-spaced has-text-grey-darker">
+                        <h6 class="title is-6">
+                          QUEBRA-GALHO
+                          <span class="icon is-marginless">
+                            <fa-icon [icon]="faMedal" size="md"></fa-icon>
+                          </span>
+                        </h6>
+                      </label>
+                    </div>
+                  </div>
+                  <div
+                    id="nivel-alto"
+                    class="column nivel"
+                    [ngClass]="nivelAltoIsSelected ? 'is-half' : ''"
+                    (click)="onClick('nivel-alto')"
+                  >
+                    <div class="notification is-primary">
+                      <img src="../../../assets/baianinho.gif" alt="" />
+                      <label class="radio-container is-spaced has-text-grey-darker">
+                        <h6 class="title is-6">
+                          BAIANINHO
+                          <span class="icon">
+                            <fa-icon [icon]="faTrophy" size="md"></fa-icon>
+                          </span>
+                        </h6>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END OF CADASTRO -->
+        <!-- PARTICIPANTES -->
+        <div id="coluna-participante" class="column is-one-quarter">
+          <div class="hero is-fullheighted">
+            <div class="hero-head">
+              <h1 class="title is-3">
+                Participantes
+              </h1>
+            </div>
+            <div class="hero-body has-text-right">
+              <ul class="column">
+                <li
+                  *ngFor="let participante of tournament.participantes"
+                >
+                  <p class="is-size-4">
+                    {{ participante.name }}
+                    <span class="icon is-large is-right" *ngIf="participante.level === 'ALTO'">
+                      <fa-icon [icon]="faTrophy" size="md"></fa-icon>
+                    </span>
+                    <span class="icon is-large is-right" *ngIf="participante.level === 'MEDIO'">
+                      <fa-icon [icon]="faMedal" size="md"></fa-icon>
+                    </span>
+                    <span class="icon is-large is-right" *ngIf="participante.level === 'BAIXO'">
+                      <fa-icon [icon]="faAward" size="md"></fa-icon>
+                    </span>
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- END OF PARTICIPANTES -->
+      </div>
+    </div>
+  </div>
+</div>

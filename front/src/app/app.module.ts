@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'; 
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -10,6 +11,7 @@ import { LayoutComponent } from './pages/layout/layout.component';
 import { MainHeaderComponent } from './components/main-header/main-header.component';
 import { MainFooterComponent } from './components/main-footer/main-footer.component';
 import { ChooseTournamentComponent } from './pages/choose-tournament/choose-tournament.component';
+import { TournamentComponent } from './pages/tournament/tournament.component';
 
 @NgModule({
   declarations: [
@@ -17,14 +19,16 @@ import { ChooseTournamentComponent } from './pages/choose-tournament/choose-tour
     LayoutComponent,
     MainHeaderComponent,
     MainFooterComponent,
-    ChooseTournamentComponent
+    ChooseTournamentComponent,
+    TournamentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

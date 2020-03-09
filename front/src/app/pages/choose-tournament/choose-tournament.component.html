@@ -21,7 +21,12 @@
       <span class="icon is-large is-right" *ngIf="spinnerSubject | async">
         <fa-icon [icon]="faSpinner" size="lg" [spin]="true"></fa-icon>
       </span>
-
+      <span class="icon is-large is-right has-text-success" *ngIf="successIconSubject | async">
+        <fa-icon [icon]="faCheck" size="lg"></fa-icon>
+      </span>
+      <span class="icon is-large is-right has-text-danger" *ngIf="failIconSubject | async">
+        <fa-icon [icon]="faTimes" size="lg"></fa-icon>
+      </span>
     </div>
   </div>
 </section>

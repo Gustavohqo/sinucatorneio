@@ -1,0 +1,25 @@
+@import "../../../styles.scss";
+
+#coluna-participante {
+  border-left: 0.01rem solid hsl(0, 0%, 86%);
+}
+
+.center {
+  margin: auto;
+}
+
+.nivel :hover {
+  cursor: pointer;
+}
+
+#nivel-baixo :hover {
+  background-color: findDarkColor($danger);
+}
+
+#nivel-medio :hover {
+  background-color: findDarkColor($warning);
+}
+
+#nivel-alto :hover {
+  background-color: findDarkColor($primary);
+}
