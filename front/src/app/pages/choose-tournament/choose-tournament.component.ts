@@ -44,7 +44,7 @@ export class ChooseTournamentComponent implements OnInit {
               this.successIconSubject.next(true);
               setTimeout(() => {
                 tournamentService.storeTournament(result[0])
-                this.router.navigate(['/tournament']);
+                this.router.navigateByUrl('/tournament', { state: { ...result[0] } });
               }, 1000);
             }, 1000);
           },

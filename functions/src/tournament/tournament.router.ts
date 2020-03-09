@@ -8,14 +8,14 @@ const tournaments = [
     name: "1 Torneio de Sinuca Siteware",
     estilo: "DUO",
     participantes: [
-      "Buxin",
-      "Crazy",
-      "Iarly",
-      "Band",
-      "Ladeira",
-      "Evy",
-      "Jean",
-      "Samuel"
+      { name: "Buxin", level: "MEDIO" },
+          { name: "Crazy", level: "MEDIO" },
+          { name: "Iarly", level: "MEDIO" },
+          { name: "Band", level: "ALTO" },
+          { name: "Ladeira", level: "MEDIO" },
+          { name: "Evy", level: "ALTO" },
+          { name: "Jean", level: "BAIXO" },
+          { name: "Samuel", level: "BAIXO" }
     ],
     status: "REGISTERING"
   }
